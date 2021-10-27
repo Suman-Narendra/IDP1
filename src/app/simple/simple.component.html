@@ -1,0 +1,67 @@
+<div class="si-1">
+    <h1> {{title}}</h1>
+
+    <table>
+        <tr>
+            <td>Principle Amount:</td>
+            <td><input type="number" #num1></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Time:</td>
+            <td><input type="number" #num2></td>
+        </tr>
+        <br>
+        <tr>
+            <td>ROI:</td>
+            <td><input type="number" value="{{rateOfIntrest}}" #num3></td>
+        </tr>
+<br>
+        <tr>
+            <td>Loan Type:</td>
+            <td><select id="myval" (change)="select(sele.value)" #sele>
+
+                <option value=7>
+          
+                  Personal
+          
+                </option >
+          
+                <option value=5>
+          
+                  Home
+          
+                </option>
+          
+                <option value=4>
+          
+                  Vehicle
+          
+                </option>
+          
+                <option value=6>
+          
+                  Education
+          
+                </option>
+          
+              </select></td>
+        </tr>
+    </table>
+    <br>
+    <div class="btn1">
+    <input type="button" class="cal1" value="Calculate" (click)="cal(num1.value,num2.value,num3.value)">
+    <br>
+    
+    </div>
+    <h2>Result:{{b}}</h2>
+
+   
+  
+
+
+    </div>
+
+    
+    <input type="text" [(ngModel)]="mydata" style="width: 300px;height: 40px;border-radius: 20px;">  <br>
+      {{mydata}}
